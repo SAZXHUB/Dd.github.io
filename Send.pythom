@@ -1,0 +1,14 @@
+from flask import Flask, request, jsonify
+
+app = Flask(__name__)
+
+@app.route('/start_attack', methods=['POST'])
+def start_attack():
+    data = request.form
+    # ดำเนินการตามที่ต้องการกับข้อมูลการโจมตีที่รับมา
+    # ยกตัวอย่างเช่น เรียกใช้ฟังก์ชันหรือโมดูลสำหรับการโจมตี
+    # ส่งข้อมูลตอบกลับ
+    return jsonify({'message': 'Attack started successfully.'})
+
+if __name__ == '__main__':
+    app.run(debug=True)
